@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Lista de Livros</h1>
+
+    <a href="{{url_for('books.register')}}">Adicionar</a>
+    <hr>
+    {% for book in books %}
+    <div style='display: flex; background-color: rgb(194, 153, 206); margin: 7px; border-radius: 15px; justify-content: space-around; color: white; font-family: Arial, Helvetica, sans-serif'>
+        <p>{{book.titulo}}</p>
+    </div>
+    {% endfor %}
+    
+</body>
+</html>
